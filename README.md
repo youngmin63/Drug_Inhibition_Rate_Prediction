@@ -1,7 +1,4 @@
-<img width="468" height="629" alt="image" src="https://github.com/user-attachments/assets/53e43889-e65f-49c5-94b9-97c24d29616e" /># Drug-Inhibition-Rate-Prediction
-
 ## I. Project Goals and Tasks
----
 
 This project aimed to predict CYP3A4 inhibition rates using molecular structure data represented as SMILES, supporting early-stage drug discovery and toxicity screening.
 
@@ -10,7 +7,6 @@ I was responsible for building and evaluating regression models based on molecul
 ---
 
 ## II. EDA Summary
----
 
 The inhibition rate values ranged from 0 to 100 and showed a highly imbalanced distribution, with the majority of compounds exhibiting low to moderate inhibition and relatively few samples with high inhibition rates.
 
@@ -19,7 +15,6 @@ After incorporating external data from ChEMBL, the dataset size increased signif
 ---
 
 ## III. Description of Approach
----
 
 ### Data Preparation
 
@@ -36,7 +31,6 @@ All models were evaluated using MAE and RMSE with cross-validation, and the best
 ---
 
 ## IV. Results – Inhibition Rate Prediction
----
 
 Because the target variable was a continuous inhibition rate without extreme outliers, MAE and RMSE were used to evaluate model performance. Using baseline settings, fingerprint-based gradient boosting models achieved stable performance, while more complex models showed varying trade-offs between accuracy and computational cost.
 
@@ -49,7 +43,6 @@ Hyperparameter tuning was applied to the best-performing models to optimise lear
 ---
 
 ## V. Conclusion
----
 
 The preliminary results of the inhibition rate prediction models were promising, with reasonably low error values indicating that molecular structure information can be effectively used to estimate CYP3A4 inhibition.
 
