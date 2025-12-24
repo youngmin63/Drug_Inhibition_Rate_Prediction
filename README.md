@@ -14,11 +14,6 @@ The inhibition rate values ranged from 0 to 100 and showed a highly imbalanced d
 The molecular dataset was cleaned and standardised by validating SMILES strings, removing invalid or duplicate molecules, and aligning inhibition rate values across sources. 
 To address data imbalance, particularly the scarcity of high-inhibition compounds, SMILES randomisation was applied to augment samples with inhibition rates above 70%.
 
-### Feature Engineering
-
-The molecular dataset was cleaned and standardised by validating SMILES strings, removing invalid or duplicate molecules, and aligning inhibition rate values across sources. 
-To address data imbalance, particularly the scarcity of high-inhibition compounds, SMILES randomisation was applied to augment samples with inhibition rates above 70%.
-
 ### Modelling Approach
 
 The task was formulated as a regression problem.
