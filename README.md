@@ -5,7 +5,12 @@ The final solution is based on molecular fingerprint features combined with grad
 
 ## II. EDA Summary
 
-The inhibition rate values ranged from 0 to 100 and showed a highly imbalanced distribution, with the majority of compounds exhibiting low to moderate inhibition and relatively few samples with high inhibition rates.
+- Inhibition rates ranged from 0 to 100 and showed a highly imbalanced distribution, with most compounds exhibiting low to moderate inhibition and relatively few high-inhibition samples.
+- Elemental composition analysis indicated that compounds were primarily composed of common atoms such as carbon, nitrogen, and oxygen, with only a small number of halogen-containing molecules.
+- The number of heavy atoms per compound was concentrated within a moderate range, suggesting relatively consistent molecular complexity across the dataset.
+- Molecular weight distribution was right-skewed, with most compounds falling into the small to medium molecular weight range and a limited number of heavier molecules.
+- Correlation analysis revealed weak but statistically significant positive relationships between molecular size-related features (SMILES length and molecular weight) and inhibition rate.
+- Scatter plots showed substantial dispersion, indicating that inhibition cannot be adequately explained by simple linear relationships and motivating the use of fingerprint-based representations.
 
 ## III. Description of Approach
 
