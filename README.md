@@ -24,22 +24,20 @@ low to moderate inhibition and relatively few high-inhibition samples.
 
 ## 4. Exploratory Analysis & Key Observations
 
-### Distribution of CYP3A4 Inhibition Rates
+### The inhibition rate distribution is highly imbalanced
 
 <img src="images/inhibition_distribution.png" width="700"/>
 
 **Observation:**  
-The inhibition rate distribution is highly imbalanced, with most compounds
-exhibiting low to moderate inhibition and relatively few high-inhibition samples.
+This imbalance indicates that high-inhibition compounds are underrepresented, which can bias models toward predicting lower inhibition values.
+The skewed target distribution motivated the use of SMILES randomisation-based data augmentation for high-inhibition samples to improve model robustness.
 
-### Molecular Size vs Inhibition Rate
+### Molecular size-related features shows weak correlations with inhibition rates
 
 <img src="images/smiles_length_vs_inhibition.png" width="700"/>
 <img src="images/molecular_weight_vs_inhibition.png" width="700"/>
 
 **Observation:**  
-Molecular size-related features, including SMILES length and molecular weight, 
-exhibit only weak correlations with CYP3A4 inhibition rates and show substantial dispersion.  
 This suggests that inhibition behaviour cannot be adequately explained by simple size-based or linear relationships alone,
 highlighting the need for structure-aware representations such as molecular fingerprints.
 
@@ -56,7 +54,7 @@ Key steps included:
   to mitigate data imbalance
 
 Molecules were represented using:
-- RDKit physicochemical descriptors
+- RDKit descriptors
 - 2048-bit Morgan fingerprints
 
 These features were concatenated into fixed-length vectors for model training.
