@@ -86,14 +86,35 @@ The final leaderboard score equally weights these two components,
 encouraging models that achieve both low prediction error and strong
 alignment with true inhibition patterns.
 
+## 7. Results & Performance
 
-## IV. Results – Inhibition Rate Prediction
+### Model Performance Summary
 
-Fingerprint-based gradient boosting models showed stable performance under cross-validation, indicating reliable learning behaviour across different data splits. The models generalised well to unseen compounds while maintaining efficient training and inference compared to more complex modelling approaches.
+| Model | CV RMSE | CV NRMSE | Correlation | Local Score | LB Score |
+|------|---------|----------|-------------|-------------|----------|
+| Gradient Boosting + XGBoost (Ensemble) | 18.44 | 0.1844 | 0.8250 | 0.8203 | 0.77 |
 
-The final selected model achieved a local validation score of approximately 0.82 and a leaderboard score of around 0.77. This model was subsequently used to generate CYP3A4 inhibition rate predictions for previously unseen molecular compounds.
+### Key Findings
+- Fingerprint-based gradient boosting models showed **stable performance**
+  across validation folds.
+- Simple molecular size features alone were insufficient, reinforcing the
+  importance of fingerprint representations.
+- The selected model provided a strong balance between predictive performance
+  and practical efficiency.
 
-## V. Conclusion
+## 8. Practical Implications
 
-This project demonstrates that molecular fingerprints combined with gradient boosting models can effectively predict CYP3A4 inhibition rates with reliable accuracy.
-By focusing on well-established machine learning techniques, the final approach provides a strong and interpretable baseline suitable for practical drug discovery workflows.
+- The model can support **early-stage screening** of compounds with potential
+  CYP3A4 inhibition risks.
+- High-inhibition candidates can be prioritised for further experimental validation.
+- Fingerprint-based gradient boosting models offer a practical and interpretable
+  baseline for metabolism-related prediction tasks.
+
+## 9. Conclusion
+
+This competition project demonstrates that molecular structure information,
+when represented through fingerprints and combined with gradient boosting models,
+can effectively predict CYP3A4 inhibition rates.
+
+The final approach provides a reliable and practical baseline suitable for
+drug discovery and toxicity screening workflows.
